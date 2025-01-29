@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт на GitHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Palui+SP&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="vignette"></div>
+    <div class="container">
+        <div class="content-box" id="content-box">
+            <!-- Баннер -->
+            <div class="banner">
+                <div class="water-effect">
+                    <img src="logo.png" alt="Banner">
+                </div>
+                <div class="avatar">
+                    <img src="ds.png" alt="Avatar">
+                </div>
+            </div>
+
+            <!-- Ник -->
+            <div class="nickname">
+                AN1XBETTXR AKA анька)
+            </div>
+
+            <!-- Появляющийся текст -->
+            <div class="appearing-text">
+                КТО НЕ ПОДПИСАН НА ТГ И ДС-ТОТ СОСАЛ
+            </div>
+
+            <!-- Ссылки на соцсети -->
+            <div class="social-links">
+                <a href="https://t.me/Spacebymilo" target="_blank" class="social-link-box">
+                    <img src="telegram.png" alt="Telegram">
+                </a>
+                <a href="https://discord.gg/wUp9buhUxQ" target="_blank" class="social-link-box">
+                    <img src="discord.png" alt="Discord">
+                </a>
+            </div>
+
+            <!-- Виджет для Spotify -->
+            <div id="spotify-activity" style="align-self: flex-end; margin-top: auto;">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5xSJ9OeM2fnyYBKAnh3eOh?utm_source=generator&theme=0" width="300" height="80" frameborder="0" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const contentBox = document.getElementById('content-box');
+            const xContentBox = (e.clientX - window.innerWidth / 2) / 70; // Чувствительность наклона
+            const yContentBox = (e.clientY - window.innerHeight / 2) / 70; // Чувствительность наклона
+
+            contentBox.style.transform = `rotateY(${xContentBox * 2}deg) rotateX(${yContentBox * 2}deg)`; // Увеличение наклона
+        });
+    </script>
+</body>
+</html>
