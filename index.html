@@ -57,10 +57,10 @@
     <script>
         document.addEventListener('mousemove', function(e) {
             const contentBox = document.getElementById('content-box');
-            const xContentBox = (e.clientX - window.innerWidth / 2) / 70; // Чувствительность наклона
-            const yContentBox = (e.clientY - window.innerHeight / 2) / 70; // Чувствительность наклона
+            const xContentBox = (e.clientX - window.innerWidth / 2) / 70; 
+            const yContentBox = (e.clientY - window.innerHeight / 2) / 70; 
 
-            contentBox.style.transform = `rotateY(${xContentBox * 2}deg) rotateX(${yContentBox * 2}deg)`; // Увеличение наклона
+            contentBox.style.transform = `rotateY(${xContentBox * 2}deg) rotateX(${yContentBox * 2}deg)`; 
         });
     </script>
 </body>
